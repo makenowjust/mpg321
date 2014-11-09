@@ -114,7 +114,8 @@ mpg321.prototype.exec = function exec(execOptions, callback) {
     callback = execOptions;
     execOptions = {};
   }
-  return child_process.exec([mpg321path()].concat(this._options, this._files), execOptions, callback);
+
+  return child_process.execFile(mpg321path(), this._options.concat(this._files), execOptions, callback);
 };
 
 // call mpg321 command via `child_process.spawn`.
