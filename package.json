@@ -1,6 +1,6 @@
 {
   "name": "mpg321",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "The mpg321 wrapper for Node.js",
   "keywords": [
     "mpg321",

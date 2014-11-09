@@ -107,7 +107,7 @@ each({
   };
 });
 
-// call mpg321 command via `child_process.exec`.
+// call mpg321 command via `child_process.execFile`.
 mpg321.prototype.exec = function exec(execOptions, callback) {
   // if `execOptions` is callable, use as `callback`.
   if (typeof execOptions === 'function') {
@@ -115,12 +115,16 @@ mpg321.prototype.exec = function exec(execOptions, callback) {
     execOptions = {};
   }
 
-  return child_process.execFile(mpg321path(), this._options.concat(this._files), execOptions, callback);
+  child = child_process.execFile(mpg321path(), this._options.concat(this._files), execOptions, callback);
+  process.on('exit', function () { child.kill(); }); // TODO: really want auto kill?
+  return child;
 };
 
 // call mpg321 command via `child_process.spawn`.
 mpg321.prototype.spawn = function spawn(spawnOptions) {
-  return child_process.spawn(mpg321path(), this._options.concat(this._files), spawnOptions);
+  child = child_process.spawn(mpg321path(), this._options.concat(this._files), spawnOptions);
+  process.on('exit', function () { child.kill(); }); // TODO: really want auto kill?
+  return child;
 };
 
 // call mpg321 command with '-R' option.
@@ -161,7 +165,7 @@ function setupStreamHandler(emitter, stream) {
           break;
         case '@I':
           line.shift();
-          emittea.emitr('info', line);
+          emitter.emit('info', line);
       }
     }));
 }
@@ -185,7 +189,7 @@ each({
 each({
   'pause': 'PAUSE',
   'stop':  'STOP',
-  'QUIT':  'QUIT',
+  'quit':  'QUIT',
 }, function (name, cmdName) {
   mpg321remote.prototype[name] = function () {
     this.command(cmdName);
