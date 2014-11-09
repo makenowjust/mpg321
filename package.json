@@ -2,11 +2,20 @@
   "name": "mpg321",
   "version": "0.1.0",
   "description": "The mpg321 wrapper for Node.js",
-  "keywords": [ "mpg321", "mpg123", "play", "sound", "audio" ],
+  "keywords": [
+    "mpg321",
+    "mpg123",
+    "play",
+    "sound",
+    "audio"
+  ],
   "homepage": "https://github.com/MakeNowJust/mpg321",
   "bugs": "https://github.com/MakeNowJust/mpg321/issues",
   "license": "Apache-2.0",
   "author": "TSUYUSATO Kitsune <make.just.on@gmail.com>",
   "main": "index.js",
   "repository": "https://github.com/MakeNowJust/mpg321.git",
+  "dependencies": {
+    "event-stream": "^3.1.7"
+  }
 }
