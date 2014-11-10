@@ -2,6 +2,9 @@
 
 The mpg321 wrapper for Node.js
 
+[![NPM](https://nodei.co/npm/mpg321.png)](https://nodei.co/npm/mpg321/)
+[![Dependency Status](https://david-dm.org/MakeNowJust/mpg321.svg)](https://david-dm.org/MakeNowJust/mpg321)
+
 ##Prerequisite
 
 It requires `mpg321`.
