@@ -23,7 +23,7 @@ function mpg321path() {
 // class mpg321
 
 // `mpg321` is the mpg321 class constructor.
-// `options` is the options passing as arguments to mpg321 command. (default is empty object `[]`)
+// `options` is the options passing as arguments to mpg321 command. (default is empty array `[]`)
 // `files` is the file list passing as arguments to mpg321 command. (default is empty array `[]`)
 function mpg321(options, files) {
   // called without `new`, it returns new instance.
