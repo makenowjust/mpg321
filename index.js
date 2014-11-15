@@ -55,7 +55,7 @@ each({
   'frames'      : '-n',
   'list'        : '-@',
   'wav'         : '-w',
-  'loop'        : '-l',
+  'loop'        : '--loop',
 
   // there options have long name only.
   'cdr'         : '--cdr',
