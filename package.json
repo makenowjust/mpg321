@@ -15,7 +15,11 @@
   "author": "TSUYUSATO Kitsune <make.just.on@gmail.com>",
   "main": "index.js",
   "repository": "https://github.com/MakeNowJust/mpg321.git",
+  "scripts": {
+    "preinstall": "node bin/check-mpg321.js"
+  },
   "dependencies": {
-    "event-stream": "^3.1.7"
+    "event-stream": "^3.1.7",
+    "which": "^1.0.8"
   }
 }
