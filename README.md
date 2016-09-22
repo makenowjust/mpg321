@@ -89,11 +89,11 @@ add options or files.
 mpg321().options('-b').file('./music.mp3')
 ```
 
-### `mpg321().outputDevice(device)`
+### `mpg321().outputdevice(device)`
 
 Please read `-o` section of `man mpg321`.
 
-### `mpg321().audioDevice(device)`
+### `mpg321().audiodevice(device)`
 
 Please read `-a` section of `man mpg321`.
 
