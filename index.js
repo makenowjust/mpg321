@@ -48,8 +48,8 @@ mpg321.prototype.file = function file() {
 // options requiring next argument
 each({
   // there options have long name and short name.
-  'outputdevice': '-o',
-  'audiodevice' : '-a',
+  'outputDevice': '-o',
+  'audioDevice' : '-a',
   'gain'        : '-g',
   'skip'        : '-k',
   'frames'      : '-n',
