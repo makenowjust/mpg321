@@ -1,5 +1,7 @@
 # mpg321
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/MakeNowJust/mpg321.svg)](https://greenkeeper.io/)
+
 The mpg321 wrapper for Node.js
 
 [![npm](https://nodei.co/npm/mpg321.png)](https://nodei.co/npm/mpg321/)
